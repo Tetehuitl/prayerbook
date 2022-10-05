@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+TIMES=3
+FILE=Prayerbook.tex
+BOOKLET_FILE=booklet.tex
+I=0
+
+while [ $TIMES -gt $I ]; do
+lualatex $FILE
+((++I))
+done
+
+lualatex $BOOKLET_FILE

@@ -1,6 +1,6 @@
 % !TeX TS-program = lualatex
 
-\documentclass[10pt]{extbook}
+\documentclass[10pt,twoside,openright]{extbook}
 
 % -------------------- packages ------------------------------
 
@@ -49,14 +49,15 @@
 {\small \tableofcontents}
 
 %\let\cleardoublepage\clearpage
+\let\cleardoublepage\clearpage
 
 
-\input{chapters/introduction.tex}
+%\input{chapters/introduction.tex}
 % -------------------------- Mainmatter -----------------------------
 \mainmatter
 
 % -------------------------- Main  -----------------------------
-\let\cleardoublepage\clearpage
+%\let\cleardoublepage\clearpage
 
 \input{chapters/moleben.tex}
 \input{chapters/canon_bvm.tex}
