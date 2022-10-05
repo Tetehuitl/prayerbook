@@ -1,0 +1,10 @@
+#!/bin/bash
+
+counter=1;
+
+while [ $counter -lt 220 ] 
+do
+	tesseract images/"$counter".png text/$counter -l eng+grc
+	echo $counter;
+	counter=$(($counter + 1));
+done	

@@ -1,0 +1,72 @@
+% !TeX TS-program = lualatex
+
+\documentclass[10pt]{extbook}
+
+% -------------------- packages ------------------------------
+
+\usepackage{CONFIG/preamble}
+%\usepackage{background}
+
+% -------------------- New Commands -----------------------------
+\input{CONFIG/NEWCMDS}
+
+
+% ------------------------- formating ----------------------------------
+
+
+
+%\smallroyalpaper{}
+\halfletterpaper{}
+%\letterpaper{}
+
+
+%\LettrineRealHeighttrue
+%\goldenmargin{0mm}
+%\luxurymargin{0mm}
+\nicemargin{47.6304pt}%\nicemargin{0mm}
+%\standardmargin{0pt} %\standardmargin{36pt}
+%\unimargin{0mm}
+
+
+
+
+% ------------------- Title and Author -----------------------------
+\title{\uppercase{Prayerbook}}
+\author{Palamites}
+
+
+% ---------------------- Document ----------------------------------
+\begin{document}
+
+\frontmatter
+
+\thispagestyle{empty}
+
+
+%\let\cleardoublepage\clearpage
+
+\maketitle
+{\small \tableofcontents}
+
+%\let\cleardoublepage\clearpage
+
+
+\input{chapters/introduction.tex}
+% -------------------------- Mainmatter -----------------------------
+\mainmatter
+
+% -------------------------- Main  -----------------------------
+\let\cleardoublepage\clearpage
+
+\input{chapters/moleben.tex}
+\input{chapters/canon_bvm.tex}
+% ------------------------- Backmatter ----------------------------
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: luatex
+%%% End:

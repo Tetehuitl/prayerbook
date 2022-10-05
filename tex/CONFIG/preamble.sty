@@ -1,0 +1,86 @@
+
+
+% -------------------- packages ------------------------------
+\usepackage{titlesec}
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+%\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+%\usepackage{amssymb}
+%\usepackage{epstopdf}
+\usepackage{microtype}
+\usepackage{lettrine}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{ellipsis}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+%\usepackage{background}
+\usepackage{framed}
+\usepackage{calc}
+\usepackage{ifthen}
+
+\usetikzlibrary{calc}
+
+% ------------------------ Custom Margins and Papersize --------------------------
+\newcommand{\royalpaper}{\geometry{papersize={6.14in,9.21in}}} % 6.14 x 9.21in
+\newcommand{\halfletterpaper}{\geometry{paperwidth=396.91594pt,paperheight=614.57951pt}}
+\newcommand{\smallroyalpaper}{\geometry{papersize={139.5mm,203.2mm}}}
+\newcommand{\letterpaper}{\geometry{paperwidth=215.9mm,paperheight=279.4mm}}
+
+\newcommand{\goldenmargin}[2]{\geometry{bindingoffset=#1,textheight=\paperwidth,textwidth=\paperwidth *\ratio{\paperwidth}{\paperheight},marginratio={2:4,3:6}}}
+\newcommand{\luxurymargin}[1]{\geometry{bindingoffset=#1,textwidth=\paperwidth *\real{.625},textheight=\paperwidth *\real{.625} *\real{1.618},marginratio={4:6,5:7}}}
+\newcommand{\nicemargin}[2]{\geometry{bindingoffset=#1,textwidth=\paperwidth *\real{.7},textheight=\paperwidth *\real{.7} *\real{1.618},marginratio={4:6,5:7}}}
+\newcommand{\standardmargin}[2]{\geometry{bindingoffset=#1,textwidth=\paperwidth *\real{.75},textheight=\paperwidth *\real{.75} *\real{1.618},marginratio={4:6,5:7}}}
+\newcommand{\unimargin}[2]{\geometry{bindingoffset=#1,textwidth=\paperwidth *\real{.82},textheight=\paperheight *\real{.82},marginratio={1:1,1:1}}}
+\newcommand{\goldenunimargin}[2]{\geometry{bindingoffset=#1,textwidth=\paperheight *\real{.82} *\real{.618},textheight=\paperheight *\real{.82},marginratio={1:1,1:1}}}
+\newcommand{\testmargin}[2]{\geometry{bindingoffset=#1,textwidth=332.8033pt,textheight=538.47447pt,marginratio={4:6,5:7}}}
+
+% -------------------- New Commands -----------------------------
+
+\setmainfont[
+ BoldFont={Cardo Bold},
+ ItalicFont={Cardo Italic},
+% BoldItalicFont={Hoefler Text Black Italic}
+ ]{Cardo}
+
+%\defaultfontfeatures{Ligatures={Common, Discretionary, Historic, Required, Contextual}}
+% ------------------------- formating ----------------------------------
+\definecolor{oxblood}{RGB}{128,0,32}
+\definecolor{cardinal}{RGB}{196,30,58}
+\definecolor{rifle}{RGB}{68,76,56}
+\definecolor{blackolive}{RGB}{59,60,54}
+
+\titleformat{\chapter}{}{}{0pt}{\bf\huge\centering}
+\titleformat{\section}{}{}{0pt}{\bf\Large\centering}
+\titleformat{\subsection}{}{}{0pt}{\bf\large\centering}
+\titleformat{\subsubsection}{}{}{0pt}{\bf\centering}
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{.01\baselineskip}
+
+%\setmainfont{Baskerville}
+\sloppy
+\setlength{\parindent}{15pt}
+
+% \geometry{legalpaper, margin=2cm}
+%%% dimensions to make paper 8 x 5 left=1.05cm, right=1.05cm, top=.3cm, bottom=.3cm
+% \geometry{a5paper, left=1.5cm, right=2.6cm, top=1.3cm, bottom=1.8cm,}
+
+% ------------------------ Neat Margins --------------------------
+%\geometry{a5paper,bindingoffset=19.7mm,textwidth=98.67mm,footskip=18mm,marginratio={4:6,5:7}}
+
+% ------------------------ Luxury Margins --------------------------
+% \geometry{a5paper,bindingoffset=22.2mm,textwidth=92.5mm,footskip=18mm,marginratio={4:6,5:7}}
+%\includeonly{sunday}
+
+%\LettrineRealHeighttrue
+\raggedbottom
+\pagestyle{plain}
+\renewcommand{\thechapter}{}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{}

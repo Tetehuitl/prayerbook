@@ -1,0 +1,118 @@
+%------------------------------------------------------------------------------------------------%
+%  Symbols 
+
+\newcommand{\antiphon}{{\bf \AA}}
+\newcommand{\versicle}{{\noindent \textcolor{cardinal}{\fontspec{Cardo}\char"2123}} } %Arial Unicode MS
+\newcommand{\response}{{\noindent  \textcolor{cardinal}{\fontspec{Cardo}\char"211F}} }
+\newcommand{\pilcrow}{{\fontspec{Cardo}\char"00B6} }
+\newcommand{\cross}{{\fontspec{Cardo}\char"2629} }
+\newcommand{\fleuron}{\textcolor{cardinal}{{\fontspec{Cardo}\char"2767}} }
+\newcommand{\fleuronup}{\textcolor{cardinal}{{\fontspec{Cardo}\char"2766}} }
+
+
+
+
+%------------------------------------------------------------------------------------------------%
+% Formatting
+
+\newcommand{\ins}[1]{\begin{center} \textcolor{cardinal}{{\footnotesize \pilcrow \it{#1}}}\end{center}}
+\newcommand{\subsub}[1]{\subsubsection{{\normalsize #1}}}
+\newcommand{\subsubsub}[1]{\begin{center} \textcolor{cardinal}{\footnotesize \it{#1}}\end{center}}
+\newcommand{\info}[1]{\textcolor{cardinal}{{\footnotesize \it{#1}}}} 
+
+
+
+%------------------------------------------------------------------------------------------------%
+% Color
+
+\newcommand{\twice}{\textcolor{cardinal}{\textit{Twice}}}
+\newcommand{\thrice}{\textcolor{cardinal}{\textit{Thrice}}}
+\newcommand{\twelve}{\textcolor{cardinal}{\textit{[12]}}}
+\newcommand{\fourty}{\textcolor{cardinal}{\textit{[40]}}}
+
+
+
+
+%------------------------------------------------------------------------------------------------%
+% Substitutions
+
+\newcommand{\priest}{\emph{Priest: }}
+\newcommand{\chanter}{\emph{Chanter: }}
+\newcommand{\reader}{\emph{Reader: }}
+
+\newcommand{\glory}{ Glory to the Father, and to the Son, and to the Holy Spirit. }
+\newcommand{\bothnow}{ Both now, and ever, and unto the ages of ages. Amen }
+\newcommand{\glorynow}{ Glory to the Father, and to the Son, and to the Holy Spirit.  Both now, and ever, and unto the ages of ages. Amen }
+\newcommand{\alleluia}{  Alleluia, alleluia, alleluia. Glory to Thee, O God. \thrice }
+\newcommand{\psalm}[1]{\begin{obeylines}{\parskip=0pt \input{psalms/#1}}\end{obeylines}}
+\newcommand{\psalmh}[1]{\subsub{{\normalsize PSALM #1}} \label{psalm#1} \psalm{#1}}
+\newcommand{\comeletus}{ Come, let us worship God our King. 
+
+		Come, let us worship and fall down before Christ, our King and our God. 
+		
+		Come, let us worship and fall down before Christ Himself, our King and our God. }
+\newcommand{\forthine}{\priest For Thine is the kingdom and the power and the glory, of the Father and the Son and the Holy Spirit, now and ever and to the ages of ages.  }
+\newcommand{\throughtheprayers}{Through the prayers of our Holy Fathers, Lord Jesus Christ our God, have mercy on us and save us. Amen }
+\newcommand{\trisagion}{ Holy God, Holy Mighty, Holy Immortal, have mercy on us. \thrice }
+\newcommand{\lent}[1]{\begin{leftbar}\ins{In Great Lent }#1\end{leftbar}}
+\newcommand{\bytheintercession}{By the intercession of Thy saints, bless, O Lord.}
+\newcommand{\itistrulymeet}{Greater in honor than the cherubim and beyond compare more glorious than the seraphim, without corruption thou gavest birth to God the Word, true Theotokos, we magnify thee. }
+\newcommand{\nowletusnowdepart}{Now let Thy servant depart in peace, O Master. according to Thy word. For my eyes have seen Thy salvation which Thou hast prepared before the face of all people. A light of revelation for the Gentiles and the glory of Thy people Israel. }
+\newcommand{\lhm}[1]{Lord, have mercy. #1}
+\newcommand{\olb}{O Lord, bless.}
+
+
+
+
+%------------------------------------------------------------------------------------------------%
+% Illuminations
+
+\newcommand{\illumine}[2]{\lettrine[image=true,lines=4,findent=0pt]{illuminatedletters/euclidRed/#1}{#2}}
+\newcommand{\illuminew}[2]{\lettrine[image=true,lines=4,findent=0pt]{illuminatedletters/williammorrisRed/#1}{#2}}
+\newcommand{\bigletter}[2]{\lettrine[findent=0pt]{\textcolor{oxblood}#1}{#2}}
+
+
+
+
+%------------------------------------------------------------------------------------------------%
+%
+
+
+%\newcommand{\kosp}[1]{\noindent\begin{minipage}{\textwidth}#1\end{minipage}\vspace{1.1mm}}
+
+
+
+
+
+%------------------------------------------------------------------------------------------------%
+% keep on same page
+
+\newcommand{\kosp}[1]{\noindent\begin{minipage}{\linewidth}#1\end{minipage}}%\vspace{1pt}}
+% \newcommand{\psalm}[1]{{\parskip=0pt \input{psalms/#1}}}
+%\newcommand{\subsub}[1]{\ins{{\normalsize #1}}}
+
+
+
+
+%------------------------------------------------------------------------------------------------%
+% enable for loop
+
+\newcommand{\forloop}[5][1]%
+{%
+\setcounter{#2}{#3}%
+\ifthenelse{#4}%
+	{%
+	#5%
+	\addtocounter{#2}{#1}%
+	\forloop[#1]{#2}{\value{#2}}{#4}{#5}%
+	}%
+% Else
+	{%
+	}%
+}%
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: luatex
+%%% End:
