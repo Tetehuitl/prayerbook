@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e
+
+TIMES=3
+FILE=prayerbook.tex
+BOOKLET_FILE=booklet.tex
+
+pushd "tex/"
+
+(I=0
+while [ $TIMES -gt $I ]; do
+    lualatex $FILE
+    ((++I))
+done
+
+lualatex $BOOKLET_FILE) 
+
+popd
