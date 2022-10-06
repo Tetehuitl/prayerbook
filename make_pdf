@@ -10,10 +10,10 @@ pushd "tex/"
 
 (I=0
 while [ $TIMES -gt $I ]; do
-    lualatex $FILE
+    lualatex -output-directory ../pdf/ $FILE
     ((++I))
 done
 
-lualatex $BOOKLET_FILE) 
+lualatex -output-directory ../pdf/ $BOOKLET_FILE) 
 
 popd
