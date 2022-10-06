@@ -15,6 +15,11 @@ This file contains the basic structure of the document and includes settings fro
 The content of the document is included in prayerbook.tex from the files in the tex/chapters directory using the `\input{}` function.
 Most the the work on the actual content is done in the chapter files.
 
+### make-pdf script
+
+The `make-pdf` script that live in the root directory will run `lualatex` on the appropriate files in the `tex` directory 3x to make sure the TOC and anything else that requires multiple passes are done.
+The script then runs `lualaex` once to make the booklet layout from the pdf output from the first three rounds.
+
 ### CONFIG
 
 TODO
