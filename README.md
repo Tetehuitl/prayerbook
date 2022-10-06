@@ -11,7 +11,7 @@ This requires lualatex & Cardo font.
 ## How to Use
 
 The main LaTeX file is prayerbook.tex which lives in the `tex/` directory.
-This file contains the basic structure of the document and includes settings from the preamble.sty, NEWCMD.tex and PACKAGES.tex files.
+This file contains the basic structure of the document and includes settings from the preamble.sty, NEWCMD.tex and PACKAGES.tex files which are located in `tex/CONFIG`.
 The content of the document is included in prayerbook.tex from the files in the tex/chapters directory using the `\input{}` function.
 Most the the work on the actual content is done in the chapter files.
 
